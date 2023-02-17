@@ -1,0 +1,34 @@
+.container-cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    border: rgb(252, 14, 14) 2px solid;
+
+}
+.cards{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: rgb(27, 148, 228) 2px solid;
+}
+.card:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.card-img{
+    width: 15%;
+    border: rgb(84, 221, 38) 2px solid;
+    
+}
+.card-title{
+    font-size: 1.5rem;
+    border: rgb(64, 6, 25) 2px solid;
+}
+.card-body{
+    border: rgb(128, 32, 212) 2px solid;
+    align-self: start;
+
+}

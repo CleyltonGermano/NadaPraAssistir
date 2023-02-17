@@ -1,6 +1,6 @@
-import Navbar from "../../components/navbar/navbar";
+import Navbar from "../../components/Navbar/Index";
 import React, { useEffect, useState } from "react";
-import "./home.css";
+import "./styles.css";
 
 const MoviesUrl = process.env.REACT_APP_API_URL;
 const MoviesApiKey = process.env.REACT_APP_API_KEY;

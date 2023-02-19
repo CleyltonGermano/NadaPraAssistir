@@ -1,22 +1,30 @@
 import Navbar from "../../components/Navbar/Index";
 import Footer from "../../components/Footer/Index";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Styles.css";
-import MovieCards from "../../components/Cards/Index";
+import { MovieCard } from "../../components/Cards/Index";
 import Carousel from "../../components/Carousel/Index";
 
+const MoviesUrl = process.env.REACT_APP_API_URL;
+const MoviesApiKey = process.env.REACT_APP_API_KEY;
+
 function Home() {
+  const [melhoresFilmes, setMelhoresFilmes] = useState([]);
 
+  const getMelhoresFilmes = async (url) => {
+    const response = await fetch(url);
+    const data = await response.json();
+    setMelhoresFilmes(data.results);
+  };
 
-  const items = [
-    {
-      image: "img/childbirth.jpg",
-      imageAlt: "Childbirth education classes",
-      svg: "svg/childbirth_education_classes_icon.webp",
-      svgAlt: "Childbirth education classes",
-      text: "CHILDBIRTH EDUCATION CLASSES",
-      textLink: "https://www.pampers.com/en-us/pregnancy/birthing-classes"
-    }];
+  useEffect(() => {
+    const melhoresFilmesUrl = `${MoviesUrl}top_rated?${MoviesApiKey}&language=pt-BR`;
+    getMelhoresFilmes(melhoresFilmesUrl);
+  }, []);
+
+  useEffect(() => {
+    console.log({ melhoresFilmes });
+  }, [melhoresFilmes]);
 
   return (
     <>
@@ -28,9 +36,16 @@ function Home() {
         <div className="body">
           <p>Confira os melhores filmes do momento</p>
           <div className="carrosel">
-            <Carousel
-              list={<MovieCards />}
-            />
+            <Carousel>
+            {melhoresFilmes &&
+              melhoresFilmes.map((movie) => (
+                <MovieCard
+                  title={movie?.title}
+                  description={movie?.overview}
+                  image_url={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
+                />
+              ))}
+            </Carousel>
           </div>
         </div>
         <div>

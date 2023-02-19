@@ -1,26 +1,23 @@
 import React from "react";
 import "./Styles.css";
 
-function MovieCards() {
-    return (
-        <div class="center">
-        <div class="property-card">
-          <a href="#">
-            <div class="property-image">
-              <div class="property-image-title">
-                <h5>Card Title</h5>
-              </div>
-            </div></a>
-          <div class="property-description">
-            <h5> Card Title </h5>
-            <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-          </div>
-          <a href="#">
-            <div class="property-social-icons">
-            </div>
-          </a>
+export function MovieCard({ title, description, image_url }) {
+  return (
+    <div class="center">
+      <div class="property-card">
+        <a href="#">
+          <img class="property-image" src={image_url} alt="Poster"/>
+        </a>
+        <div class="property-description">
+          <h5>{title}</h5>
+          <p>
+            {description}
+          </p>
         </div>
+        <a href="#">
+          <div class="property-social-icons"></div>
+        </a>
       </div>
-    );
-    }
-    export default MovieCards;
+    </div>
+  );
+}

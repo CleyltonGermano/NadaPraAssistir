@@ -1,9 +1,9 @@
-import Navbar from "../../components/Navbar/Index";
-import Footer from "../../components/Footer/Index";
+import Navbar from "../../components/Navbar/index";
+import Footer from "../../components/Footer/index";
 import React, { useEffect, useState } from "react";
-import "./Styles.css";
-import { MovieCard } from "../../components/Cards/Index";
-import Carousel from "../../components/Carousel/Index";
+import "./styles.css";
+import { MovieCard } from "../../components/Cards/index";
+import Carousel from "../../components/Carousel/index";
 
 const MoviesUrl = process.env.REACT_APP_API_URL;
 const MoviesApiKey = process.env.REACT_APP_API_KEY;

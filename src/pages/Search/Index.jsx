@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Index";
+import Navbar from "../../components/Navbar/index";
 
 function Search() {
   return (

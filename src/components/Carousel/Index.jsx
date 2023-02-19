@@ -1,6 +1,6 @@
 import React, { Children, useEffect, useState } from "react";
 import ReactCardCarousel from "react-card-carousel";
-import "./Styles.css";
+import "./styles.css";
 
 const Carrossel = ({ children }) => {
  

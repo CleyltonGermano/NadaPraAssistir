@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
-import Home from "../pages/Home/Index";
-import Movies from "../pages/Movies/Index";
-import Search from "../pages/Search/Index";
+import Home from "../pages/Home/index";
+import Movies from "../pages/Movies/index";
+import Search from "../pages/Search/index";
 
 function RoutesProject() {
   return (

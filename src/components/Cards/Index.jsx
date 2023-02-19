@@ -1,5 +1,5 @@
 import React from "react";
-import "./Styles.css";
+import "./styles.css";
 
 export function MovieCard({ title, description, image_url }) {
   return (

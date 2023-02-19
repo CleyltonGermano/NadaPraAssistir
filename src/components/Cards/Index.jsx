@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+// Arthur
 
 export function MovieCard({ title, description, image_url }) {
   return (

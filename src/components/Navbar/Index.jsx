@@ -8,7 +8,7 @@ function Navbar (){
     <div className="navbar_div">
       <h2>
         <BiCameraMovie />
-        <Link to="/">Nada pra assistir?</Link>
+        <Link to="/"><img src="public/assets/logo.jpg"/></Link>
       </h2>
 
       {/* <a>

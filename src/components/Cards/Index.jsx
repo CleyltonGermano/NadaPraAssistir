@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-export function MovieCard({ title, description, image_url }) {
+export function MovieCard({ title, image_url, release_date }) {
   return (
     <div class="center">
       <div class="property-card">
@@ -11,7 +11,7 @@ export function MovieCard({ title, description, image_url }) {
         <div class="property-description">
           <h5>{title}</h5>
           <p>
-            {description}
+            {release_date}
           </p>
         </div>
         <a href="#">

@@ -7,7 +7,7 @@ const Carrossel = ({ children }) => {
 
   return (
     <div className="container">
-      <ReactCardCarousel spread={"wide"} autoplay={true} autoplay_speed={3000}>
+      <ReactCardCarousel spread={"wide"} autoplay={true} autoplay_speed={5000}>
        {children}
       </ReactCardCarousel>
     </div>
